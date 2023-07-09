@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Plinko Crazy Winner</string>
+    <string name="settings">Settings</string>
+    <string name="info">About Game</string>
+    <string name="exit_game">Exit Game</string>
+    <string name="inventory">Inventory</string>
+    <string name="cases">Cases</string>
+    <string name="what_s_inside">Case Content</string>
+    <string name="open">Open!</string>
+    <string name="congratulations">Congratulations!</string>
+    <string name="close">Close</string>
+    <string name="your_inventory_is_empty">Your inventory is empty</string>
+    <string name="main_rule">The rules are simple! Buy cases and open them. Each case contains a few types of items. There are rare, common and other items in each case. You can sell items in the inventory</string>
+    <string name="rule_cases">There are 3 types of cases - big, medium and small. Bigger case means higher price and also higher chance to get rare items!</string>
+    <string name="rule_price">All dropped Items will appear in your inventory and then you can sell them if you want to. All items has their own price. The rarest item means higher price. Each item also has a star amount. 1 star means no multipliers, 2 stars multiplies item\'s price by 1.5 and 3 stars multiplies item\'s price by 3</string>
+    <string name="rule_settings">If you are out of money, you can reset your balance to 5000 in settings</string>
+    <string name="reset_balance">Reset Balance</string>
+</resources>

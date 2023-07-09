@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/navigation"
+    app:startDestination="@id/fragmentMenu">
+
+    <fragment
+        android:id="@+id/fragmentMenu"
+        android:name="com.plicraz.zynner.game.ui.main.FragmentMenu"
+        android:label="FragmentMenu" >
+        <action
+            app:enterAnim="@anim/enter_animation"
+            app:exitAnim="@anim/exit_animation"
+            app:popEnterAnim="@anim/pop_enter_animation"
+            app:popExitAnim="@anim/pop_exit_animation"
+            android:id="@+id/action_fragmentMenu_to_fragmentSettings"
+            app:destination="@id/fragmentSettings" />
+        <action
+            app:enterAnim="@anim/enter_animation"
+            app:exitAnim="@anim/exit_animation"
+            app:popEnterAnim="@anim/pop_enter_animation"
+            app:popExitAnim="@anim/pop_exit_animation"
+            android:id="@+id/action_fragmentMenu_to_fragmentCase"
+            app:destination="@id/fragmentCase" />
+        <action
+            app:enterAnim="@anim/enter_animation"
+            app:exitAnim="@anim/exit_animation"
+            app:popEnterAnim="@anim/pop_enter_animation"
+            app:popExitAnim="@anim/pop_exit_animation"
+            android:id="@+id/action_fragmentMenu_to_fragmentInventory"
+            app:destination="@id/fragmentInventory" />
+        <action
+            app:enterAnim="@anim/enter_animation"
+            app:exitAnim="@anim/exit_animation"
+            app:popEnterAnim="@anim/pop_enter_animation"
+            app:popExitAnim="@anim/pop_exit_animation"
+            android:id="@+id/action_fragmentMenu_to_fragmentRules"
+            app:destination="@id/fragmentRules" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentSettings"
+        android:name="com.plicraz.zynner.game.ui.settings.FragmentSettings"
+        android:label="FragmentSettings" />
+    <fragment
+        android:id="@+id/fragmentCase"
+        android:name="com.plicraz.zynner.game.ui.cases.FragmentCase"
+        android:label="FragmentCase" >
+        <action
+            app:enterAnim="@anim/enter_animation"
+            app:exitAnim="@anim/exit_animation"
+            app:popEnterAnim="@anim/pop_enter_animation"
+            app:popExitAnim="@anim/pop_exit_animation"
+            android:id="@+id/action_fragmentCase_to_fragmentCaseContent"
+            app:destination="@id/fragmentCaseContent" />
+        <action
+            app:enterAnim="@anim/enter_animation"
+            app:exitAnim="@anim/exit_animation"
+            app:popEnterAnim="@anim/pop_enter_animation"
+            app:popExitAnim="@anim/pop_exit_animation"
+            android:id="@+id/action_fragmentCase_to_fragmentOpenCase"
+            app:destination="@id/fragmentOpenCase" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentCaseContent"
+        android:name="com.plicraz.zynner.game.ui.cases.FragmentCaseContent"
+        android:label="FragmentCaseContent" >
+        <argument
+            android:name="caseOptions"
+            app:argType="com.plicraz.zynner.game.domain.other.CasesOptions" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentOpenCase"
+        android:name="com.plicraz.zynner.game.ui.cases.opening.FragmentOpenCase"
+        android:label="FragmentOpenCase" >
+        <action
+            android:id="@+id/action_fragmentOpenCase_to_dialogCase"
+            app:destination="@id/dialogCase" />
+        <argument
+            android:name="caseOptions"
+            app:argType="com.plicraz.zynner.game.domain.other.CasesOptions" />
+    </fragment>
+    <dialog
+        android:id="@+id/dialogCase"
+        android:name="com.plicraz.zynner.game.ui.cases.DialogCase"
+        android:label="DialogCase" >
+        <argument
+            android:name="item"
+            app:argType="com.plicraz.zynner.game.domain.other.OpenCaseItem" />
+    </dialog>
+    <fragment
+        android:id="@+id/fragmentInventory"
+        android:name="com.plicraz.zynner.game.ui.Inventory.FragmentInventory"
+        android:label="FragmentInventory" />
+    <fragment
+        android:id="@+id/fragmentRules"
+        android:name="com.plicraz.zynner.game.ui.info.FragmentRules"
+        android:label="FragmentRules" />
+</navigation>
